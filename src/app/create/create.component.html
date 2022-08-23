@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="userForm" >
+        <div class="">
+            <input type="text"  formControlName="fullname"    placeholder="enter full name">
+        </div>
+        <div class="">
+            <input type="text" formControlName="email"  placeholder="enter email">
+        </div>
+        <div class="">
+            <input type="text" formControlName="mobile" placeholder="enter mobile">
+        </div>
+        <div class="" *ngIf="!getparamid" (click)="userSubmit()">
+            <button>create</button>
+        </div>
+        <div class="" *ngIf="getparamid" (click)="userUpdate()">
+            <button>update</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <table>
+        <thead>
+            <th>#</th>
+            <th>fullname</th>
+            <th>email</th>
+            <th>mobile</th>
+            <th>edit</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let us of readData">
+                <td>{{us.id}}</td>
+                <td>{{us.fullname}}</td>
+                <td>{{us.email}}</td>
+                <td>{{us.mobile}}</td>
+                <td><button  (click)="deleteID(us.id)"  style="background-color: red; color:white; border-radius: 5px;">delete</button>
+                   <a [routerLink]="['/create',us.id]" routerLinkActive="router-link-active" >update</a>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

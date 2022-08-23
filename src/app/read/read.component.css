@@ -1,0 +1,7 @@
+td,th{
+    padding:15px;
+    border-bottom: solid lightgray 1px;
+}
+tr:hover{
+    background-color: rgb(216, 216, 216);
+}
